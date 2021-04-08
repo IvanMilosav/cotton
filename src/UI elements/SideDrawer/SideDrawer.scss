@@ -1,0 +1,133 @@
+.sidedrawer {
+  align-items: center;
+  background-color: white;
+  border-right: double black 0.8rem;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: space-around;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 40%;
+  z-index: 10;
+  .active-class {
+    font-weight: 900;
+  }
+  .link {
+    align-items: flex-end;
+    border-bottom: 0.4rem rgb(212, 211, 211) double;
+    color: black;
+    display: flex;
+    font-size: 2.4rem;
+    height: 7rem;
+    justify-content: center;
+    margin: 0.6rem;
+    max-width: 100%;
+    padding: 0;
+    text-decoration: none;
+    text-transform: uppercase;
+    width: 30rem;
+    a {
+      text-decoration: none;
+    }
+    &:hover {
+      font-weight: 900;
+    }
+    .active-class {
+      font-weight: bold;
+    }
+  }
+  .close {
+    cursor: pointer;
+    height: 3rem;
+    position: absolute;
+    right: 0.5rem;
+    top: 0.5rem;
+    width: 3rem;
+    .close-icon {
+      color: black;
+      font-size: 3rem;
+    }
+  }
+  .sd-img {
+    align-self: center;
+    height: 20rem;
+    width: 20rem;
+  }
+}
+.burgerbutton {
+  background-color: #fff;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  display: none;
+  height: 5rem;
+  opacity: 0.8;
+  outline: none;
+  position: fixed;
+  right: 2rem;
+  top: 2rem;
+  width: 5rem;
+  .bars {
+    -ms-transform: translate(-50%, -50%);
+    height: 3rem;
+    left: 50%;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 3rem;
+  }
+}
+@media (max-width: 2000px) {
+  .sidedrawer {
+    width: 35%;
+  }
+}
+@media (max-width: 1024px) {
+  .sidedrawer {
+    width: 55%;
+    .link {
+      font-size: 2.6rem;
+    }
+  }
+  .burgerbutton {
+    display: block;
+  }
+}
+@media (max-width: 600px) {
+  .sidedrawer {
+    width: 60%;
+    .link {
+      width: 20rem;
+    }
+  }
+}
+@media (max-height: 450px) {
+  .sidedrawer {
+    width: 40%;
+    .link {
+      height: 5rem;
+    }
+    .sd-img {
+      display: none;
+    }
+  }
+}
+.my-node-enter {
+  opacity: 0;
+}
+.my-node-enter-active {
+  opacity: 1;
+  transition: opacity 500ms;
+}
+.my-node-exit {
+  opacity: 1;
+}
+.my-node-exit-active {
+  opacity: 0;
+  transition: opacity 400ms;
+}
+.my-node-exit-done {
+  display: none;
+}

@@ -1,0 +1,36 @@
+.bestselling {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  grid-column: content-start/content-end;
+  height: min-content;
+  justify-content: center;
+  min-height: 45rem;
+  .container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 2.5rem;
+    width: 100%;
+  }
+  .title {
+    border-bottom: double black 1.5rem;
+    font-size: 4rem;
+    height: 20%;
+    text-align: center;
+    width: 100%;
+  }
+  .fetch-error {
+    font-size: 5rem;
+    margin: 3rem;
+    text-align: center;
+  }
+}
+@media (max-width: 600px) {
+  .bestselling {
+    .container {
+      padding: 1rem;
+    }
+  }
+}

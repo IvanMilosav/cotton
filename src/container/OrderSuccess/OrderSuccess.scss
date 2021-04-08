@@ -1,0 +1,19 @@
+.success {
+  align-items: center;
+  display: flex;
+  font-size: 4rem;
+  grid-column: page-start/page-end;
+  justify-content: center;
+  min-height: 60vh;
+  padding: 5rem;
+  text-align: center;
+  width: 100%;
+  .success-link {
+    cursor: pointer;
+    font-family: "Lora", "Playfair Display", serif;
+    font-size: 4rem;
+    text-align: center;
+    text-decoration: underline;
+    text-transform: lowercase;
+  }
+}

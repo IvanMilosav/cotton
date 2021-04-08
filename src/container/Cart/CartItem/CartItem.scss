@@ -1,0 +1,107 @@
+.cartitem {
+  border-bottom: black double 1rem;
+  display: flex;
+  height: 25rem;
+  justify-content: space-between;
+  width: 80%;
+  .left {
+    align-items: center;
+    display: flex;
+    font-size: 3rem;
+    justify-content: flex-start;
+    .nameprice {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+    }
+    .cartitem-img {
+      border: black double 0.5rem;
+      height: 21rem;
+      margin-right: 2rem;
+      padding: 1rem;
+      width: 18rem;
+    }
+  }
+  .right {
+    align-items: center;
+    display: flex;
+    font-size: 3rem;
+    text-align: center;
+    .quanti {
+      height: 5rem;
+      width: 5rem;
+    }
+    .add {
+      align-items: center;
+      background-color: white;
+      border: none;
+      cursor: pointer;
+      display: flex;
+      font-size: 3rem;
+      height: 5rem;
+      justify-content: center;
+      outline: none;
+      transition: 0.3s;
+      width: 5rem;
+      &:active {
+        transform: translateY(0.2rem);
+      }
+    }
+    .sub {
+      align-items: center;
+      background-color: white;
+      border: none;
+      cursor: pointer;
+      display: flex;
+      font-size: 3rem;
+      height: 5rem;
+      justify-content: center;
+      outline: none;
+      transition: 0.3s;
+      width: 5rem;
+      &:active {
+        transform: translateY(0.2rem);
+      }
+    }
+  }
+  .remove {
+    align-items: center;
+    background-color: white;
+    border: black;
+    cursor: pointer;
+    display: flex;
+    font-size: 1.4rem;
+    height: 5rem;
+    justify-content: center;
+    margin-left: 2rem;
+    outline: none;
+    transition: 0.3s;
+    width: 12rem;
+    &:hover {
+      color: red;
+    }
+  }
+}
+@media (max-width: 1024px) {
+  .cartitem {
+    width: 100%;
+  }
+}
+@media (max-width: 600px) {
+  .cartitem {
+    .right {
+      flex-direction: column;
+      justify-content: center;
+      .add {
+        font-size: 2;
+        height: 4rem;
+        width: 4rem;
+      }
+      .sub {
+        font-size: 2;
+        height: 4rem;
+        width: 4rem;
+      }
+    }
+  }
+}

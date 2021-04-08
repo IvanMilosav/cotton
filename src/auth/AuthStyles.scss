@@ -1,0 +1,122 @@
+.auth-form {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  grid-column: content-start/content-end;
+  margin-bottom: 5rem;
+  margin-top: 5rem;
+  min-height: 65vh;
+  width: 100%;
+  .title {
+    border-bottom: black double 1.5rem;
+    font-size: 4rem;
+    font-weight: 500;
+    margin-bottom: 3rem;
+    text-align: center;
+    text-transform: uppercase;
+    width: 100%;
+  }
+  .item {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+    width: 27rem;
+  }
+  .input {
+    border: none;
+    border-bottom: solid black 0.1rem;
+    font-size: 2rem;
+    height: 5rem;
+    outline: none;
+    width: 27rem;
+  }
+  .input-title {
+    font-size: 2rem;
+    text-transform: uppercase;
+  }
+  .input-error_text {
+    color: red;
+    font-size: 1.2rem;
+    text-align: right;
+    text-transform: none;
+  }
+  .phone-start {
+    border: none;
+    border-bottom: solid black 0.1rem;
+    font-size: 2rem;
+    height: 5rem;
+    margin-top: 1rem;
+    outline: none;
+    text-align: end;
+    width: 7rem;
+  }
+  .phone-end {
+    border: none;
+    border-bottom: solid black 0.1rem;
+    font-size: 2rem;
+    height: 5rem;
+    margin-top: 1rem;
+    outline: none;
+    width: 20rem;
+  }
+  .country_selector {
+    background-color: white;
+    border: double 0.4rem black;
+    font-family: inherit;
+    font-size: 2rem;
+    height: 5rem;
+    margin-top: 0.8rem;
+    outline: none;
+    width: 27rem;
+  }
+  .auth-button {
+    -moz-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    background-color: white;
+    border: double black 0.8rem;
+    cursor: pointer;
+    font-size: 2rem;
+    height: 5rem;
+    margin: 2rem;
+    transition: 0.3s;
+    width: 27rem;
+    &:hover {
+      transform: scale(1.05);
+    }
+    &:disabled {
+      background-color: rgb(151, 151, 151);
+      cursor: not-allowed;
+      transform: scale(1);
+    }
+    &:active {
+      transform: translateY(0.3rem);
+    }
+  }
+  .auth-error {
+    color: red;
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  .auth-link {
+    color: black;
+    font-size: 1.5rem;
+    margin-top: 1rem;
+  }
+}
+// password reset
+.reset-password {
+  align-items: center;
+  display: flex;
+  font-size: 3rem;
+  grid-column: content-start/content-end;
+  justify-content: center;
+  margin-bottom: 5rem;
+  margin-top: 5rem;
+  min-height: 60vh;
+  width: 100%;
+}
+.auth-reset-link {
+  color: black;
+  font-size: 3rem;
+}

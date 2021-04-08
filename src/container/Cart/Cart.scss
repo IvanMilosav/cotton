@@ -1,0 +1,51 @@
+.cart {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  grid-column: content-start/content-end;
+  margin-bottom: 5rem;
+  margin-top: 5rem;
+  min-height: 65vh;
+  .title {
+    border-bottom: double 1.5rem black;
+    font-size: 4rem;
+    text-align: center;
+    width: 100%;
+  }
+  .order-button {
+    align-self: flex-end;
+    border: double black 1rem;
+    cursor: pointer;
+    font-size: 2rem;
+    height: 5rem;
+    margin-top: 1rem;
+    text-align: center;
+    transition: 0.3s;
+    width: 27rem;
+    &:hover {
+      transform: scale(1.05);
+    }
+    &:disabled {
+      background-color: rgb(151, 151, 151);
+      cursor: not-allowed;
+      transform: scale(1);
+    }
+    &:active {
+      transform: translateY(0.3rem);
+    }
+  }
+  .requirement {
+    align-self: flex-end;
+    color: red;
+    font-size: 1.2rem;
+    text-align: end;
+    text-transform: uppercase;
+  }
+  .total {
+    align-self: flex-end;
+    font-size: 2.4rem;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    text-align: end;
+  }
+}
