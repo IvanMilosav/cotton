@@ -8,6 +8,9 @@ import {
   AUTH_ERROR_REMOVE
 } from "./actionTypes/actionTypes";
 
+const { REACT_APP_LOG_IN, REACT_APP_SIGN_UP } = process.env;
+const logInUrl = REACT_APP_LOG_IN;
+const signUpUrl = REACT_APP_SIGN_UP;
 export const authStart = () => {
   return {
     type: AUTH_START
@@ -59,8 +62,7 @@ export const authLogIn = (email, password) => {
       password,
       returnSecureToken: true
     };
-    const url =
-      "https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyChrZYShFuZAEa3gN_kd6S4SGXpsejvExA";
+    const url = logInUrl;
 
     axios
       .post(url, authData)
@@ -88,8 +90,7 @@ export const authSignUp = (email, password) => {
       password,
       returnSecureToken: true
     };
-    const url =
-      "https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyChrZYShFuZAEa3gN_kd6S4SGXpsejvExA";
+    const url = signUpUrl;
 
     axios
       .post(url, authData)
